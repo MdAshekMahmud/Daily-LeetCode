@@ -1,0 +1,37 @@
+# Compiled files
+*.class
+*.exe
+*.out
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual Environment
+venv/
+.venv/
+env/
+
+# C++ build files
+*.o
+*.obj
+
+# Java build files
+target/
+*.jar
+
+# IDE Files
+.vscode/
+.idea/
+
+# OS Generated Files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.swp
