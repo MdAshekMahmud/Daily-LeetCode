@@ -1,0 +1,47 @@
+[33mcommit 5d2914a37187eb57a8cde3da32fd0bc9f689c121[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: MdAshekMahmud <ashek242-15-854@diu.edu.bd>
+Date:   Tue Jul 28 20:46:59 2026 +0600
+
+    Solved problem Strictly greater and smaller
+
+[33mcommit bb9db98cd130004da58783dff1e665562f3c4f2f[m
+Author: MdAshekMahmud <ashek242-15-854@diu.edu.bd>
+Date:   Fri Jul 24 12:30:39 2026 +0600
+
+    Move optimized solution to Solutions directory
+
+[33mcommit 47343d5d0146f730b9519bbe16f051d6d4882d2f[m
+Author: MdAshekMahmud <ashek242-15-854@diu.edu.bd>
+Date:   Thu Jul 23 16:29:28 2026 +0600
+
+    Prefix Product and Suffix Product with extra space solution
+
+[33mcommit fc5c142f7d42c1d084f2f60b332bbadf568c2384[m
+Author: MdAshekMahmud <ashek242-15-854@diu.edu.bd>
+Date:   Thu Jul 23 00:14:06 2026 +0600
+
+    Optimized space complexity solution
+
+[33mcommit f27210accbb1da47325a6e0957ce050044d03ddd[m
+Author: MdAshekMahmud <ashek242-15-854@diu.edu.bd>
+Date:   Wed Jul 15 04:55:55 2026 +0600
+
+    Solution using extra space
+
+[33mcommit f3135fc5a158fa84c78ff909c68a8925da6aa577[m
+Author: MdAshekMahmud <ashek242-15-854@diu.edu.bd>
+Date:   Wed Jul 15 03:52:56 2026 +0600
+
+    LICENSE
+
+[33mcommit 0e71ed732e55dd5c6e3e29147f6ffbe2721e20ca[m
+Author: MdAshekMahmud <ashek242-15-854@diu.edu.bd>
+Date:   Wed Jul 15 03:52:14 2026 +0600
+
+    Added README.md
+
+[33mcommit 127a5dfd76820cd46198e8d0aae916d85b51c6f0[m
+Author: MdAshekMahmud <ashek242-15-854@diu.edu.bd>
+Date:   Wed Jul 15 03:51:13 2026 +0600
+
+    setup .gitignore file
