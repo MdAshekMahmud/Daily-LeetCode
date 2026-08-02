@@ -14,14 +14,8 @@ class Solution {
         }
 
         // Reverse each n
-        for (int k = 0; k < n; k++) {
-            int i = 0, j = n - 1;
-
-            while (i <= j) { // swapping k, i with k, j
-                swap(matrix[k][i], matrix[k][j]);
-                i++;
-                j--;
-            }
+        for (auto &row : matrix) {
+            reverse(row.begin(), row.end());
         }
     }
 };
