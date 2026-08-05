@@ -4,16 +4,7 @@ using namespace std;
 class Solution {
   public:
     void moveZeroes(vector<int> &nums) {
-        int n = nums.size();
-
-        int l = 0, r = 0;
-        while (l < n && r < n) {
-            if (nums[r] == 0) {
-                r++;
-            } else {
-                swap(nums[l++], nums[r++]);
-            }
-        }
+        stable_partition(nums.begin(), nums.end(), [](int n) { return n != 0; });
     }
 };
 
