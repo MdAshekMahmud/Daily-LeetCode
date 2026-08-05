@@ -4,33 +4,20 @@ using namespace std;
 class Solution {
   public:
     vector<int> plusOne(vector<int> &digits) {
-        int n = digits.size();
-        vector<int> ans;
+        int n = digits.size() - 1;
 
-        int x = n - 1;
-        if (digits[n - 1] != 9) {
-            digits[n - 1]++;
-        } else {
-            while (x >= 0 && digits[x] == 9) {
-                digits[x] = 0;
-                x--;
-            }
-            if (x < 0) {
-                digits[0] = 1;
-                digits.push_back(0);
-            }
-            if (x >= 0) {
-                digits[x]++;
-            }
+        while (n >= 0 && digits[n] == 9) {
+            digits[n--] = 0;
         }
-
-        for (int i = 0; i < digits.size(); i++) {
-            ans.push_back(digits[i]);
+        if (n < 0) {
+            digits.insert(digits.begin(), 1);
         }
-        return ans;
+        if (n >= 0) {
+            digits[n]++;
+        }
+        return digits;
     }
 };
-
 int main() {
     Solution s;
     vector<int> nums = {8, 9, 9, 9};
