@@ -1,22 +1,34 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+bool search(vector<int> &matrix, int target) {
+    int n = matrix.size();
+    int low = 0, high = n - 1;
+
+    while (low <= high) {
+        int mid = (low + high) / 2;
+
+        if (matrix[mid] == target)
+            return true;
+
+        else if (matrix[mid] > target)
+            high = mid - 1;
+
+        else
+            low = mid + 1;
+    }
+    return false;
+}
+
 class Solution {
   public:
     bool searchMatrix(vector<vector<int>> &matrix, int target) {
-        int row = matrix.size();
-        int col = matrix[0].size();
+        int n = matrix.size();
 
-        int i = 0, j = col - 1;
-        while (j >= 0 && i < row) {
-            if (matrix[i][j] == target)
+        for (int i = 0; i < n; i++) {
+            if (search(matrix[i], target))
                 return true;
-            else if (matrix[i][j] > target)
-                j--;
-            else
-                i++;
         }
-
         return false;
     }
 };
