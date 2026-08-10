@@ -4,28 +4,16 @@ using namespace std;
 class Solution {
   public:
     int removeElement(vector<int> &nums, int val) {
-        int n = nums.size();
+        int n = 0;
 
-        int i = 0, j = 0;
-        while (i < n && j < n) {
-            if (nums[j] == val) {
-                while (nums[j] == val && j < n - 1) {
-                    j++;
-                }
-                swap(nums[i], nums[j]);
-            } else if (nums[i] == val) {
-                swap(nums[i], nums[j]);
-            }
-            i++;
-            j++;
-        }
-        int count = 0;
-        for (int i = 0; i < n; i++) {
+        int cnt = 0;
+        for (int i = 0; i < nums.size(); i++) {
             if (nums[i] != val) {
-                count++;
+                nums[n++] = nums[i];
+                cnt++;
             }
         }
-        return count;
+        return cnt;
     }
 };
 
