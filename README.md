@@ -26,12 +26,12 @@ The goal is to maintain consistency and improve one problem at a time.
 
 This repository is organized by language and problem category to keep solutions easy to browse and maintain.
 
-| Topic            | Folder                                                   | Problems                                 |
-| ---------------- | -------------------------------------------------------- | ---------------------------------------- |
-| Arrays           | [C++/cpp/arrays](C++/arrays)                             | Array and sequence-based problems        |
-| Matrices         | [C++/cpp/matrices](C++/matrices)                         | 2D matrix and grid problems              |
-| Strings          | [C++/cpp/strings](C++/strings)                           | String manipulation and parsing          |
-| Sorting & Search | [C++/cpp/sorting_and_search](C++/cpp/sorting_and_search) | Search, ordering, and sorting techniques |
-| Two Pointers     | [C++/cpp/two_pointers](C++/two_pointers)                 | Pointer-based optimization problems      |
+| Topic            | Folder                                               | Problems                                 |
+| ---------------- | ---------------------------------------------------- | ---------------------------------------- |
+| Arrays           | [C++/arrays](C++/arrays)                             | Array and sequence-based problems        |
+| Matrices         | [C++/matrices](C++/matrices)                         | 2D matrix and grid problems              |
+| Strings          | [C++/strings](C++/strings)                           | String manipulation and parsing          |
+| Sorting & Search | [C++/sorting_and_search](C++/cpp/sorting_and_search) | Search, ordering, and sorting techniques |
+| Two Pointers     | [C++/two_pointers](C++/two_pointers)                 | Pointer-based optimization problems      |
 
 Each folder contains solutions grouped by a common problem pattern to make review and practice easier.
