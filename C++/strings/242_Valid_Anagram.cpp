@@ -1,6 +1,27 @@
 #include <bits/stdc++.h>
 using namespace std;
+class Solution {
+  public:
+    bool isAnagram(string s, string t) {
+        int len1 = s.length();
+        int len2 = t.length();
+        if (len1 != len2)
+            return false;
 
+        unordered_map<char, int> mp;
+
+        for (char c : s) {
+            mp[c]++;
+        }
+        for (char c : t) {
+            if (mp.find(c) == mp.end() || mp[c] == 0) {
+                return false;
+            }
+            mp[c]--;
+        }
+        return true;
+    }
+};
 class Solution {
   public:
     bool isAnagram(string s, string t) {
