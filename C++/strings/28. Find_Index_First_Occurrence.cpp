@@ -4,26 +4,18 @@ using namespace std;
 class Solution {
   public:
     int strStr(string haystack, string needle) {
-        int len1 = haystack.length();
-        int len2 = needle.length();
+        int n = haystack.length();
+        int m = needle.length();
 
-        int idx = -1;
-        for (int i = 0; i <= len1 - len2; i++) {
-            bool flag = false;
-            for (int j = 0; j < len2; j++) {
-                if (haystack[i + j] == needle[j]) {
-                    flag = true;
-                } else {
-                    flag = false;
-                    break;
-                }
-            }
-            if (flag) {
-                idx = i;
-                break;
+        if (n < m) {
+            return -1;
+        }
+        for (int i = 0; i <= n - m; i++) {
+            if (haystack.substr(i, needle.length()) == needle) {
+                return i;
             }
         }
-        return idx;
+        return -1;
     }
 };
 
