@@ -5,17 +5,21 @@ class Solution {
   public:
     int majorityElement(vector<int> &nums) {
         int n = nums.size();
-        map<int, int> mp;
-        for (int i = 0; i < n; i++) {
-            mp[nums[i]]++;
-        }
 
-        for (auto el : mp) {
-            if (el.second > n / 2) {
-                return el.first;
+        int count = 0;
+        int candidate = 0;
+        for (int i = 0; i < n; i++) {
+            if (count == 0) {
+                candidate = nums[i];
+            }
+            if (nums[i] == candidate) {
+                count++;
+            } else {
+                count--;
             }
         }
-        return -1;
+
+        return candidate;
     }
 };
 
