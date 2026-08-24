@@ -4,25 +4,24 @@ using namespace std;
 class Solution {
   public:
     vector<vector<int>> threeSum(vector<int> &nums) {
-        vector<vector<int>> res;
         int n = nums.size();
         set<vector<int>> st;
 
-        for (int i = 0; i < n - 2; i++) {
-            for (int j = i + 1; j < n - 1; j++) {
-                for (int k = j + 1; k < n; k++) {
-                    if (nums[i] + nums[j] + nums[k] == 0) {
-                        vector<int> ans = {nums[i], nums[j], nums[k]};
-                        sort(ans.begin(), ans.end());
+        for (int i = 0; i < n; i++) {
+            int target = -nums[i];
+            set<int> s;
 
-                        if (st.find(ans) == st.end()) {
-                            st.insert(ans);
-                            res.push_back(ans);
-                        }
-                    }
+            for (int j = i + 1; j < n; j++) {
+                int third = target - nums[j];
+                if (s.find(third) != s.end()) {
+                    vector<int> temp = {nums[i], nums[j], third};
+                    sort(temp.begin(), temp.end());
+                    st.insert(temp);
                 }
+                s.insert(nums[j]);
             }
         }
+        vector<vector<int>> res(st.begin(), st.end());
         return res;
     }
 };
