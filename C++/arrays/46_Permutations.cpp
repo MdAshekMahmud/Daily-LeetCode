@@ -3,16 +3,24 @@ using namespace std;
 
 class Solution {
   public:
-    std::vector<vector<int>> permute(vector<int> &nums) {
-        vector<vector<int>> result;
+    vector<vector<int>> permute(vector<int> &nums) {
+        vector<vector<int>> permutations = {{}};
 
-        sort(nums.begin(), nums.end());
+        for (int num : nums) {
+            vector<vector<int>> next_permutations;
 
-        do {
-            result.push_back(nums);
-        } while (next_permutation(nums.begin(), nums.end()));
+            for (const auto &p : permutations) {
 
-        return result;
+                for (int i = 0; i <= p.size(); i++) {
+                    vector<int> new_perm = p;
+
+                    new_perm.insert(new_perm.begin() + i, num);
+                    next_permutations.push_back(new_perm);
+                }
+            }
+            permutations = move(next_permutations);
+        }
+        return permutations;
     }
 };
 
