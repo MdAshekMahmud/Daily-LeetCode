@@ -20,7 +20,11 @@ class Solution {
 int main() {
     Solution sol;
     vector<int> nums = {4, 3, 2, 7, 8, 2, 3, 1};
-    cout << sol.findDisappearedNumbers(nums) << '\n';
+    vector<int> ans = sol.findDisappearedNumbers(nums);
+
+    for (int el : ans) {
+        cout << el << " ";
+    }
 
     return 0;
 }
