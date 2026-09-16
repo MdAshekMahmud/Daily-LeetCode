@@ -4,26 +4,22 @@ using namespace std;
 class Solution {
   public:
     int maxNumberOfBalloons(string text) {
-        int n = text.length();
-        unordered_map<char, int> mp;
-        for (int i = 0; i < n; i++) {
-            if (text[i] == 'b' || text[i] == 'a' || text[i] == 'l' || text[i] == 'o' ||
-                text[i] == 'n') {
-                mp[text[i]]++;
-            }
-        }
-        if (mp.size() < 5)
-            return 0;
+        int b = 0, a = 0, l = 0, o = 0, n = 0;
 
-        int ans = INT_MAX;
-        for (auto el : mp) {
-            if (el.first == 'l' || el.first == 'o') {
-                ans = min(ans, el.second / 2);
-            }
-            ans = min(ans, el.second);
+        for (char ch : text) {
+            if (ch == 'b')
+                b++;
+            else if (ch == 'a')
+                a++;
+            else if (ch == 'l')
+                l++;
+            else if (ch == 'o')
+                o++;
+            else if (ch == 'n')
+                n++;
         }
 
-        return ans;
+        return min({b, a, n, l / 2, o / 2});
     }
 };
 
