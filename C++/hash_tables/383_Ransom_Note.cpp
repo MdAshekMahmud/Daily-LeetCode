@@ -4,18 +4,20 @@ using namespace std;
 class Solution {
   public:
     bool canConstruct(string ransomNote, string magazine) {
-        sort(ransomNote.begin(), ransomNote.end());
-        sort(magazine.begin(), magazine.end());
+        unordered_map<char, int> hash;
 
-        int cnt = 0, idx = 0;
-        for (int i = 0; i < magazine.length(); i++) {
-            if (idx < ransomNote.length() && magazine[i] == ransomNote[idx]) {
-                cnt++;
-                idx++;
-            }
+        for (char c : magazine) {
+            hash[c]++;
         }
 
-        return idx == ransomNote.length();
+        for (char c : ransomNote) {
+            if (hash[c] <= 0) {
+                return false;
+            }
+            hash[c]--;
+        }
+
+        return true;
     }
 };
 
