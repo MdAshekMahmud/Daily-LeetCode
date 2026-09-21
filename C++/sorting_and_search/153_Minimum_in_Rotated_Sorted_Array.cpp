@@ -11,22 +11,12 @@ class Solution {
         while (low <= high) {
             int mid = low + (high - low) / 2;
 
-            if (nums[low] <= nums[mid]) {
-                res = min(res, nums[mid]);
+            res = min(res, nums[mid]);
 
-                if (nums[low] <= nums[high]) {
-                    high = mid - 1;
-                } else {
-                    low = mid + 1;
-                }
+            if (nums[low] > nums[high] && nums[mid] > nums[high]) {
+                low = mid + 1;
             } else {
-                res = min(res, nums[mid]);
-
-                if (nums[low] >= nums[high] && nums[mid] >= nums[high]) {
-                    low = mid + 1;
-                } else {
-                    high = mid - 1;
-                }
+                high = mid - 1;
             }
         }
 
